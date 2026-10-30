@@ -1,0 +1,6 @@
+# Python 3.10; versions used in the paper
+torch==2.1.0
+torch_geometric==2.4.0
+numpy==1.26.4
+matplotlib==3.10.9
+plotly==7.1.0

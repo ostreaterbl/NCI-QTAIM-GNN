@@ -1,0 +1,71 @@
+2026-10-27 18:20:50 | INFO     | ======================================================================
+2026-10-27 18:20:50 | INFO     | STARTING BOND-ADDITIVE ENERGY EVALUATION
+2026-10-27 18:20:50 | INFO     | ======================================================================
+2026-10-27 18:20:50 | INFO     | Loading checkpoint: des300k_275_desc_schnet_dist/best_model.pt
+2026-10-27 18:20:51 | INFO     | Model loaded. bond_mode=desc_schnet | gate=none | nam=False | dist=True | descriptors=['rho', 'lapl', 'g', 'v', 'h']
+2026-10-27 18:20:51 | INFO     | Energy stats from checkpoint: mean=0.000000, std=0.013205
+2026-10-27 18:20:51 | INFO     | Loading test set: data/E_S66x8_275.pkl
+2026-10-27 18:20:51 | INFO     | Molecules in test set: 520
+2026-10-27 18:20:51 | INFO     | DataLoader ready. Batches: 9
+2026-10-27 18:20:51 | INFO     | Running inference...
+2026-10-27 18:20:52 | INFO     | 
+======================================================================
+2026-10-27 18:20:52 | INFO     | GLOBAL ENERGY METRICS
+2026-10-27 18:20:52 | INFO     | ======================================================================
+2026-10-27 18:20:52 | INFO     | Total molecules evaluated: 520
+2026-10-27 18:20:52 | INFO     | Total bond paths:          1380
+2026-10-27 18:20:52 | INFO     | MSE:  0.000003
+2026-10-27 18:20:52 | INFO     | MAE:  0.001111
+2026-10-27 18:20:52 | INFO     | RMSE: 0.001849
+2026-10-27 18:20:52 | INFO     | R2:   0.9099
+2026-10-27 18:20:52 | INFO     | Scatter plot saved to: logs/evaluation_bond_scatter.png
+2026-10-27 18:20:52 | INFO     | 
+ERROR BY NUMBER OF BOND PATHS IN DIMER
+2026-10-27 18:20:52 | INFO     | --------------------------------------------------
+2026-10-27 18:20:52 | INFO     | N_BP   |      N |        MAE |  Mean signed
+2026-10-27 18:20:52 | INFO     | --------------------------------------------------
+2026-10-27 18:20:52 | INFO     | 1      |    173 |   0.000776 |    +0.000706
+2026-10-27 18:20:52 | INFO     | 2      |    192 |   0.001268 |    +0.000721
+2026-10-27 18:20:52 | INFO     | 3      |     46 |   0.001107 |    -0.000713
+2026-10-27 18:20:52 | INFO     | 4      |     25 |   0.002122 |    +0.000464
+2026-10-27 18:20:52 | INFO     | 5      |     14 |   0.000607 |    +0.000228
+2026-10-27 18:20:52 | INFO     | 6      |     30 |   0.001367 |    -0.000268
+2026-10-27 18:20:52 | INFO     | 7      |     13 |   0.000773 |    -0.000488
+2026-10-27 18:20:52 | INFO     | 8      |     16 |   0.000939 |    -0.000869
+2026-10-27 18:20:52 | INFO     | 9      |      2 |   0.005945 |    -0.005945
+2026-10-27 18:20:52 | INFO     | >=10   |      9 |   0.001055 |    -0.000782
+2026-10-27 18:20:52 | INFO     | 
+BOND CONTRIBUTIONS BY PAIR TYPE (sorted by total share)
+2026-10-27 18:20:52 | INFO     | ------------------------------------------------------------------------------------------
+2026-10-27 18:20:52 | INFO     | Pair Type    |      N |   mean e_b |    min e_b |    max e_b | share % | median e/V
+2026-10-27 18:20:52 | INFO     | ------------------------------------------------------------------------------------------
+2026-10-27 18:20:52 | INFO     | H...O        |    297 |  -0.005272 |  -0.014653 |  -0.000103 |    49.3 |     0.7365
+2026-10-27 18:20:52 | INFO     | H...N        |    204 |  -0.002989 |  -0.011681 |   0.000177 |    19.2 |     0.7108
+2026-10-27 18:20:52 | INFO     | C...H        |    264 |  -0.001821 |  -0.008470 |  -0.000005 |    15.1 |     0.9155
+2026-10-27 18:20:52 | INFO     | C...C        |    143 |  -0.001917 |  -0.005548 |   0.000364 |     8.6 |     1.4254
+2026-10-27 18:20:52 | INFO     | H...H        |    419 |  -0.000430 |  -0.000803 |   0.000008 |     5.7 |     0.3965
+2026-10-27 18:20:52 | INFO     | N...O        |     14 |  -0.001676 |  -0.003573 |  -0.000504 |     0.7 |     0.4562
+2026-10-27 18:20:52 | INFO     | N...N        |     14 |  -0.001471 |  -0.003481 |   0.000971 |     0.6 |     0.7019
+2026-10-27 18:20:52 | INFO     | C...O        |      9 |  -0.001676 |  -0.004064 |  -0.000027 |     0.5 |     2.9927
+2026-10-27 18:20:52 | INFO     | C...N        |     16 |  -0.000572 |  -0.003286 |   0.000421 |     0.3 |     0.0745
+2026-10-27 18:20:53 | INFO     | e_b vs V plot saved to: logs/evaluation_bond_ebond_vs_V.png
+2026-10-27 18:20:53 | INFO     | e_b/V boxplot saved to: logs/evaluation_bond_e_over_V_box.png
+2026-10-27 18:20:53 | INFO     | Per-dimer errors saved to: logs/evaluation_bond_errors.csv
+2026-10-27 18:20:53 | INFO     | Per-bond-path contributions saved to: logs/evaluation_bond_bonds.csv
+2026-10-27 18:20:53 | INFO     | 
+TOP 10 MOLECULES WITH LARGEST ABSOLUTE ERROR:
+2026-10-27 18:20:53 | INFO     |    1. 26_Uracil-Uracil_pi-pi_100.xyz | n_BP=  4 | true= -0.0157 | pred= -0.0058 | err= +0.0099
+2026-10-27 18:20:53 | INFO     |    2. 50_Benzene-Ethyne_CH-pi_110.xyz | n_BP=  4 | true= -0.0041 | pred= -0.0140 | err= -0.0098
+2026-10-27 18:20:53 | INFO     |    3. 50_Benzene-Ethyne_CH-pi_125.xyz | n_BP=  6 | true= -0.0028 | pred= -0.0120 | err= -0.0091
+2026-10-27 18:20:53 | INFO     |    4. 26_Uracil-Uracil_pi-pi_105.xyz | n_BP=  4 | true= -0.0150 | pred= -0.0061 | err= +0.0089
+2026-10-27 18:20:53 | INFO     |    5. 26_Uracil-Uracil_pi-pi_095.xyz | n_BP=  6 | true= -0.0151 | pred= -0.0063 | err= +0.0088
+2026-10-27 18:20:53 | INFO     |    6. 50_Benzene-Ethyne_CH-pi_090.xyz | n_BP=  3 | true= -0.0030 | pred= -0.0109 | err= -0.0079
+2026-10-27 18:20:53 | INFO     |    7. 41_Uracil-Pentane_100.xyz      | n_BP= 10 | true= -0.0077 | pred= -0.0151 | err= -0.0074
+2026-10-27 18:20:53 | INFO     |    8. 26_Uracil-Uracil_pi-pi_110.xyz | n_BP=  4 | true= -0.0138 | pred= -0.0069 | err= +0.0069
+2026-10-27 18:20:53 | INFO     |    9. 41_Uracil-Pentane_095.xyz      | n_BP=  9 | true= -0.0075 | pred= -0.0139 | err= -0.0064
+2026-10-27 18:20:53 | INFO     |   10. 20_AcOH-AcOH_090.xyz           | n_BP=  2 | true= -0.0278 | pred= -0.0218 | err= +0.0060
+2026-10-27 18:20:53 | INFO     | 
+======================================================================
+2026-10-27 18:20:53 | INFO     | BOND-ADDITIVE ENERGY EVALUATION COMPLETE
+2026-10-27 18:20:53 | INFO     | Check: logs/evaluation_bond.log, logs/evaluation_bond_scatter.png, logs/evaluation_bond_errors.csv, logs/evaluation_bond_bonds.csv
+2026-10-27 18:20:53 | INFO     | ======================================================================

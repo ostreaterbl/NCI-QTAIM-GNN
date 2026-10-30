@@ -1,0 +1,32 @@
+2026-10-21 19:35:20 | INFO     | ======================================================================
+2026-10-21 19:35:20 | INFO     | STARTING ENERGY REGRESSION EVALUATION
+2026-10-21 19:35:20 | INFO     | ======================================================================
+2026-10-21 19:35:20 | INFO     | Loading checkpoint: test_painn_des300k_275_geom/best_model.pt
+2026-10-21 19:35:20 | INFO     | Model loaded. graph_mode=custom | h=64 | cutoff=12.0
+2026-10-21 19:35:20 | INFO     | Energy stats from checkpoint: mean=0.001299, std=0.013141
+2026-10-21 19:35:20 | INFO     | Loading test set: data/6calc_2.pkl
+2026-10-21 19:35:20 | INFO     | Excluded 3 molecules. Remaining: 3
+2026-10-21 19:35:20 | INFO     | DataLoader ready. Batches: 1
+2026-10-21 19:35:20 | INFO     | Running inference...
+2026-10-21 19:35:20 | INFO     | 
+======================================================================
+2026-10-21 19:35:20 | INFO     | GLOBAL ENERGY METRICS
+2026-10-21 19:35:20 | INFO     | ======================================================================
+2026-10-21 19:35:20 | INFO     | Total molecules evaluated: 3
+2026-10-21 19:35:20 | INFO     | MSE:  0.010196
+2026-10-21 19:35:20 | INFO     | MAE:  0.063676
+2026-10-21 19:35:20 | INFO     | RMSE: 0.100977
+2026-10-21 19:35:20 | INFO     | R2:   -3.6487
+2026-10-21 19:35:20 | INFO     | Generating prediction vs true value scatter plot...
+2026-10-21 19:35:21 | INFO     | Scatter plot saved to: logs/evaluation_energy_scatter.png
+2026-10-21 19:35:21 | INFO     | Detailed error log saved to: logs/evaluation_energy_errors.csv
+2026-10-21 19:35:21 | INFO     | 
+TOP 10 MOLECULES WITH LARGEST ABSOLUTE ERROR:
+2026-10-21 19:35:21 | INFO     |    1. 2OBF.xyz                       | true= -0.3174 | pred= -0.1433 | err= +0.1741
+2026-10-21 19:35:21 | INFO     |    2. 3PE2.xyz                       | true= -0.2032 | pred= -0.1866 | err= +0.0167
+2026-10-21 19:35:21 | INFO     |    3. 2p4y.xyz                       | true= -0.2504 | pred= -0.2507 | err= -0.0003
+2026-10-21 19:35:21 | INFO     | 
+======================================================================
+2026-10-21 19:35:21 | INFO     | ENERGY EVALUATION COMPLETE
+2026-10-21 19:35:21 | INFO     | Check: logs/evaluation_energy.log, logs/evaluation_energy_scatter.png, logs/evaluation_energy_errors.csv
+2026-10-21 19:35:21 | INFO     | ======================================================================

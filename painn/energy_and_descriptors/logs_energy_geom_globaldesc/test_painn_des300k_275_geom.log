@@ -1,0 +1,242 @@
+2026-10-04 18:52:18 | INFO     | ============================================================
+2026-10-04 18:52:18 | INFO     | STARTING TRAINING
+2026-10-04 18:52:18 | INFO     | ============================================================
+2026-10-04 18:52:18 | INFO     |   seed: 42
+2026-10-04 18:52:18 | INFO     |   val_frac: 0.1
+2026-10-04 18:52:18 | INFO     |   test_frac: 0.1
+2026-10-04 18:52:18 | INFO     |   batch_size: 128
+2026-10-04 18:52:18 | INFO     |   num_workers: 4
+2026-10-04 18:52:18 | INFO     |   lr: 0.0001
+2026-10-04 18:52:18 | INFO     |   weight_decay: 1e-06
+2026-10-04 18:52:18 | INFO     |   epochs: 500
+2026-10-04 18:52:18 | INFO     |   hidden_channels: 64
+2026-10-04 18:52:18 | INFO     |   num_filters: 64
+2026-10-04 18:52:18 | INFO     |   num_interactions: 5
+2026-10-04 18:52:18 | INFO     |   num_gaussians: 50
+2026-10-04 18:52:18 | INFO     |   schnet_cutoff: 12.0
+2026-10-04 18:52:18 | INFO     |   head_hidden: 256
+2026-10-04 18:52:18 | INFO     |   dropout: 0.1
+2026-10-04 18:52:18 | INFO     |   use_painn: True
+2026-10-04 18:52:18 | INFO     |   use_pos_weight: True
+2026-10-04 18:52:18 | INFO     |   pos_weight_scale: 0.2
+2026-10-04 18:52:18 | INFO     |   mp_add_cand_bidir: True
+2026-10-04 18:52:18 | INFO     |   mp_dedup: False
+2026-10-04 18:52:18 | INFO     |   cand_canonicalize: False
+2026-10-04 18:52:18 | INFO     |   task: energy_regression
+2026-10-04 18:52:18 | INFO     |   target_descriptor: rho
+2026-10-04 18:52:18 | INFO     |   graph_mode: custom
+2026-10-04 18:52:18 | INFO     |   radius_cutoff: 12.0
+2026-10-04 18:52:18 | INFO     |   max_num_neighbors: 32
+2026-10-04 18:52:18 | INFO     |   use_global_features: False
+2026-10-04 18:52:18 | INFO     |   global_feature_dim: 0
+2026-10-04 18:52:18 | INFO     |   use_normalization: True
+2026-10-04 18:52:18 | INFO     |   data_path: data/E_des300k_275.pkl
+2026-10-04 18:52:18 | INFO     |   log_dir: last_logs
+2026-10-04 18:52:18 | INFO     |   ckpt_dir: test_painn_des300k_275_geom
+2026-10-04 18:52:18 | INFO     |   log_file: test_painn_des300k_275_geom.log
+2026-10-04 18:52:18 | INFO     |   global_features_list: ['sum_rho', 'sum_v', 'sum_lapl', 'sum_g', 'sum_h']
+2026-10-04 18:52:18 | INFO     |   pairwise_mode: shared
+2026-10-04 18:52:18 | INFO     |   frset: [1, 6, 7, 8, 9, 15, 16, 17, 35]
+2026-10-04 18:52:18 | INFO     |   pair_head_hidden: 256
+2026-10-04 18:52:18 | INFO     |   early_stopping_patience: 40
+2026-10-04 18:52:18 | INFO     |   early_stopping_min_delta: 1e-05
+2026-10-04 18:52:18 | INFO     |   use_range: False
+2026-10-04 18:52:18 | INFO     |   num_virt_nodes: 4
+2026-10-04 18:52:18 | INFO     |   virt_hidden_channels: 256
+2026-10-04 18:52:18 | INFO     |   num_virt_heads: 4
+2026-10-04 18:52:18 | INFO     |   virt_basis_dim: 16
+2026-10-04 18:52:18 | INFO     |   range_regularization: linear
+2026-10-04 18:52:18 | INFO     |   range_min_atoms: 5
+2026-10-04 18:52:18 | INFO     |   range_max_atoms: 200
+2026-10-04 18:52:18 | INFO     | ============================================================
+2026-10-04 18:52:18 | INFO     | Device: cuda | GPUs: 2
+2026-10-04 18:54:40 | INFO     | Split: train=214440, val=26805, test=26805
+2026-10-04 18:54:40 | INFO     | Global features DISABLED (use_global_features=False)
+2026-10-04 18:54:40 | INFO     | Energy stats (train only): mean=0.001299, std=0.013141
+2026-10-04 18:54:40 | INFO     | Using EnergyModel (graph_mode=custom, encoder=PaiNN)
+2026-10-04 18:54:40 | INFO     |   RANGE DISABLED (use_range=False)
+2026-10-04 18:54:40 | INFO     | Using single GPU: cuda:1 (DataParallel off)
+2026-10-04 18:54:40 | INFO     | Task: energy_regression pos_weight disabled
+2026-10-04 18:55:30 | INFO     | Epoch 001 |  49.7s | train_loss(MSE)=0.421838 | val MSE=0.000024 MAE=0.002156 RMSE=0.004857 R2=0.8631
+2026-10-04 18:55:30 | INFO     | Saved new best model (mae=0.002156)
+2026-10-04 18:56:22 | INFO     | Epoch 002 |  51.9s | train_loss(MSE)=0.098578 | val MSE=0.000011 MAE=0.001468 RMSE=0.003244 R2=0.9389
+2026-10-04 18:56:22 | INFO     | Saved new best model (mae=0.001468)
+2026-10-04 18:57:19 | INFO     | Epoch 003 |  57.1s | train_loss(MSE)=0.056579 | val MSE=0.000006 MAE=0.001366 RMSE=0.002532 R2=0.9628
+2026-10-04 18:57:19 | INFO     | Saved new best model (mae=0.001366)
+2026-10-04 18:58:15 | INFO     | Epoch 004 |  55.3s | train_loss(MSE)=0.045256 | val MSE=0.000005 MAE=0.001165 RMSE=0.002198 R2=0.9720
+2026-10-04 18:58:15 | INFO     | Saved new best model (mae=0.001165)
+2026-10-04 18:59:11 | INFO     | Epoch 005 |  57.0s | train_loss(MSE)=0.035100 | val MSE=0.000004 MAE=0.001036 RMSE=0.002028 R2=0.9761
+2026-10-04 18:59:12 | INFO     | Saved new best model (mae=0.001036)
+2026-10-04 19:00:07 | INFO     | Epoch 006 |  55.7s | train_loss(MSE)=0.030441 | val MSE=0.000004 MAE=0.001051 RMSE=0.002085 R2=0.9748
+2026-10-04 19:01:04 | INFO     | Epoch 007 |  56.4s | train_loss(MSE)=0.026368 | val MSE=0.000006 MAE=0.001047 RMSE=0.002390 R2=0.9669
+2026-10-04 19:01:58 | INFO     | Epoch 008 |  53.9s | train_loss(MSE)=0.024633 | val MSE=0.000002 MAE=0.000842 RMSE=0.001549 R2=0.9861
+2026-10-04 19:01:58 | INFO     | Saved new best model (mae=0.000842)
+2026-10-04 19:02:54 | INFO     | Epoch 009 |  56.4s | train_loss(MSE)=0.021400 | val MSE=0.000004 MAE=0.000816 RMSE=0.001880 R2=0.9795
+2026-10-04 19:02:54 | INFO     | Saved new best model (mae=0.000816)
+2026-10-04 19:03:46 | INFO     | Epoch 010 |  52.3s | train_loss(MSE)=0.019862 | val MSE=0.000003 MAE=0.000803 RMSE=0.001582 R2=0.9855
+2026-10-04 19:03:46 | INFO     | Saved new best model (mae=0.000803)
+2026-10-04 19:04:44 | INFO     | Epoch 011 |  57.3s | train_loss(MSE)=0.018836 | val MSE=0.000002 MAE=0.000766 RMSE=0.001337 R2=0.9896
+2026-10-04 19:04:44 | INFO     | Saved new best model (mae=0.000766)
+2026-10-04 19:05:42 | INFO     | Epoch 012 |  57.9s | train_loss(MSE)=0.017888 | val MSE=0.000002 MAE=0.000772 RMSE=0.001381 R2=0.9889
+2026-10-04 19:06:36 | INFO     | Epoch 013 |  54.5s | train_loss(MSE)=0.015953 | val MSE=0.000002 MAE=0.000716 RMSE=0.001330 R2=0.9897
+2026-10-04 19:06:36 | INFO     | Saved new best model (mae=0.000716)
+2026-10-04 19:07:34 | INFO     | Epoch 014 |  57.6s | train_loss(MSE)=0.015870 | val MSE=0.000002 MAE=0.000720 RMSE=0.001497 R2=0.9870
+2026-10-04 19:08:28 | INFO     | Epoch 015 |  54.6s | train_loss(MSE)=0.014833 | val MSE=0.000002 MAE=0.000843 RMSE=0.001571 R2=0.9857
+2026-10-04 19:09:21 | INFO     | Epoch 016 |  52.5s | train_loss(MSE)=0.014366 | val MSE=0.000001 MAE=0.000662 RMSE=0.001151 R2=0.9923
+2026-10-04 19:09:21 | INFO     | Saved new best model (mae=0.000662)
+2026-10-04 19:10:20 | INFO     | Epoch 017 |  59.5s | train_loss(MSE)=0.013651 | val MSE=0.000001 MAE=0.000627 RMSE=0.001183 R2=0.9919
+2026-10-04 19:10:20 | INFO     | Saved new best model (mae=0.000627)
+2026-10-04 19:11:19 | INFO     | Epoch 018 |  58.8s | train_loss(MSE)=0.013496 | val MSE=0.000001 MAE=0.000611 RMSE=0.001141 R2=0.9924
+2026-10-04 19:11:19 | INFO     | Saved new best model (mae=0.000611)
+2026-10-04 19:12:11 | INFO     | Epoch 019 |  52.1s | train_loss(MSE)=0.012225 | val MSE=0.000002 MAE=0.000653 RMSE=0.001302 R2=0.9902
+2026-10-04 19:13:05 | INFO     | Epoch 020 |  54.1s | train_loss(MSE)=0.012537 | val MSE=0.000002 MAE=0.000656 RMSE=0.001456 R2=0.9877
+2026-10-04 19:14:02 | INFO     | Epoch 021 |  56.3s | train_loss(MSE)=0.011996 | val MSE=0.000001 MAE=0.000615 RMSE=0.001197 R2=0.9917
+2026-10-04 19:14:59 | INFO     | Epoch 022 |  57.4s | train_loss(MSE)=0.011487 | val MSE=0.000001 MAE=0.000573 RMSE=0.001050 R2=0.9936
+2026-10-04 19:14:59 | INFO     | Saved new best model (mae=0.000573)
+2026-10-04 19:15:53 | INFO     | Epoch 023 |  54.5s | train_loss(MSE)=0.010771 | val MSE=0.000001 MAE=0.000609 RMSE=0.001193 R2=0.9917
+2026-10-04 19:16:48 | INFO     | Epoch 024 |  54.4s | train_loss(MSE)=0.010247 | val MSE=0.000001 MAE=0.000618 RMSE=0.001116 R2=0.9928
+2026-10-04 19:17:43 | INFO     | Epoch 025 |  55.5s | train_loss(MSE)=0.010363 | val MSE=0.000001 MAE=0.000589 RMSE=0.001076 R2=0.9933
+2026-10-04 19:18:38 | INFO     | Epoch 026 |  54.5s | train_loss(MSE)=0.010515 | val MSE=0.000001 MAE=0.000529 RMSE=0.000997 R2=0.9942
+2026-10-04 19:18:38 | INFO     | Saved new best model (mae=0.000529)
+2026-10-04 19:19:33 | INFO     | Epoch 027 |  55.1s | train_loss(MSE)=0.009774 | val MSE=0.000001 MAE=0.000574 RMSE=0.001114 R2=0.9928
+2026-10-04 19:20:25 | INFO     | Epoch 028 |  52.4s | train_loss(MSE)=0.010084 | val MSE=0.000001 MAE=0.000536 RMSE=0.001034 R2=0.9938
+2026-10-04 19:21:22 | INFO     | Epoch 029 |  56.9s | train_loss(MSE)=0.009789 | val MSE=0.000002 MAE=0.000688 RMSE=0.001294 R2=0.9903
+2026-10-04 19:22:15 | INFO     | Epoch 030 |  52.8s | train_loss(MSE)=0.009102 | val MSE=0.000001 MAE=0.000531 RMSE=0.000974 R2=0.9945
+2026-10-04 19:23:05 | INFO     | Epoch 031 |  49.7s | train_loss(MSE)=0.009386 | val MSE=0.000001 MAE=0.000586 RMSE=0.001049 R2=0.9936
+2026-10-04 19:24:01 | INFO     | Epoch 032 |  56.3s | train_loss(MSE)=0.008396 | val MSE=0.000001 MAE=0.000546 RMSE=0.001070 R2=0.9934
+2026-10-04 19:24:58 | INFO     | Epoch 033 |  57.4s | train_loss(MSE)=0.008413 | val MSE=0.000001 MAE=0.000545 RMSE=0.001187 R2=0.9918
+2026-10-04 19:25:55 | INFO     | Epoch 034 |  57.1s | train_loss(MSE)=0.009026 | val MSE=0.000001 MAE=0.000506 RMSE=0.001007 R2=0.9941
+2026-10-04 19:25:55 | INFO     | Saved new best model (mae=0.000506)
+2026-10-04 19:26:52 | INFO     | Epoch 035 |  56.2s | train_loss(MSE)=0.008632 | val MSE=0.000001 MAE=0.000493 RMSE=0.000881 R2=0.9955
+2026-10-04 19:26:52 | INFO     | Saved new best model (mae=0.000493)
+2026-10-04 19:27:47 | INFO     | Epoch 036 |  55.1s | train_loss(MSE)=0.008008 | val MSE=0.000001 MAE=0.000472 RMSE=0.000915 R2=0.9951
+2026-10-04 19:27:47 | INFO     | Saved new best model (mae=0.000472)
+2026-10-04 19:28:42 | INFO     | Epoch 037 |  54.7s | train_loss(MSE)=0.008020 | val MSE=0.000001 MAE=0.000519 RMSE=0.001003 R2=0.9942
+2026-10-04 19:29:37 | INFO     | Epoch 038 |  55.1s | train_loss(MSE)=0.007787 | val MSE=0.000001 MAE=0.000603 RMSE=0.001110 R2=0.9928
+2026-10-04 19:30:36 | INFO     | Epoch 039 |  59.2s | train_loss(MSE)=0.007967 | val MSE=0.000001 MAE=0.000509 RMSE=0.000973 R2=0.9945
+2026-10-04 19:31:30 | INFO     | Epoch 040 |  54.4s | train_loss(MSE)=0.008356 | val MSE=0.000001 MAE=0.000460 RMSE=0.000911 R2=0.9952
+2026-10-04 19:31:30 | INFO     | Saved new best model (mae=0.000460)
+2026-10-04 19:32:24 | INFO     | Epoch 041 |  53.7s | train_loss(MSE)=0.007725 | val MSE=0.000001 MAE=0.000546 RMSE=0.000963 R2=0.9946
+2026-10-04 19:33:21 | INFO     | Epoch 042 |  56.6s | train_loss(MSE)=0.007207 | val MSE=0.000001 MAE=0.000486 RMSE=0.001022 R2=0.9939
+2026-10-04 19:34:14 | INFO     | Epoch 043 |  53.5s | train_loss(MSE)=0.007275 | val MSE=0.000001 MAE=0.000495 RMSE=0.000950 R2=0.9948
+2026-10-04 19:35:10 | INFO     | Epoch 044 |  55.6s | train_loss(MSE)=0.007001 | val MSE=0.000001 MAE=0.000514 RMSE=0.000910 R2=0.9952
+2026-10-04 19:36:04 | INFO     | Epoch 045 |  54.7s | train_loss(MSE)=0.007222 | val MSE=0.000001 MAE=0.000512 RMSE=0.001040 R2=0.9937
+2026-10-04 19:36:58 | INFO     | Epoch 046 |  53.7s | train_loss(MSE)=0.007646 | val MSE=0.000001 MAE=0.000449 RMSE=0.000834 R2=0.9960
+2026-10-04 19:36:58 | INFO     | Saved new best model (mae=0.000449)
+2026-10-04 19:37:51 | INFO     | Epoch 047 |  52.7s | train_loss(MSE)=0.006517 | val MSE=0.000002 MAE=0.000607 RMSE=0.001337 R2=0.9896
+2026-10-04 19:38:47 | INFO     | Epoch 048 |  56.4s | train_loss(MSE)=0.006695 | val MSE=0.000001 MAE=0.000500 RMSE=0.001032 R2=0.9938
+2026-10-04 19:39:39 | INFO     | Epoch 049 |  51.7s | train_loss(MSE)=0.006729 | val MSE=0.000002 MAE=0.000625 RMSE=0.001394 R2=0.9887
+2026-10-04 19:40:37 | INFO     | Epoch 050 |  58.4s | train_loss(MSE)=0.006826 | val MSE=0.000001 MAE=0.000573 RMSE=0.000995 R2=0.9943
+2026-10-04 19:41:32 | INFO     | Epoch 051 |  54.8s | train_loss(MSE)=0.006674 | val MSE=0.000001 MAE=0.000430 RMSE=0.000753 R2=0.9967
+2026-10-04 19:41:32 | INFO     | Saved new best model (mae=0.000430)
+2026-10-04 19:42:27 | INFO     | Epoch 052 |  55.4s | train_loss(MSE)=0.006419 | val MSE=0.000001 MAE=0.000499 RMSE=0.000997 R2=0.9942
+2026-10-04 19:43:23 | INFO     | Epoch 053 |  55.2s | train_loss(MSE)=0.006793 | val MSE=0.000001 MAE=0.000529 RMSE=0.001072 R2=0.9933
+2026-10-04 19:44:18 | INFO     | Epoch 054 |  54.9s | train_loss(MSE)=0.006173 | val MSE=0.000001 MAE=0.000433 RMSE=0.000823 R2=0.9961
+2026-10-04 19:45:13 | INFO     | Epoch 055 |  55.1s | train_loss(MSE)=0.006047 | val MSE=0.000001 MAE=0.000451 RMSE=0.000825 R2=0.9961
+2026-10-04 19:46:08 | INFO     | Epoch 056 |  54.9s | train_loss(MSE)=0.006079 | val MSE=0.000001 MAE=0.000520 RMSE=0.001106 R2=0.9929
+2026-10-04 19:47:03 | INFO     | Epoch 057 |  55.3s | train_loss(MSE)=0.006500 | val MSE=0.000001 MAE=0.000472 RMSE=0.000936 R2=0.9949
+2026-10-04 19:48:00 | INFO     | Epoch 058 |  56.7s | train_loss(MSE)=0.006130 | val MSE=0.000001 MAE=0.000503 RMSE=0.001112 R2=0.9928
+2026-10-04 19:48:56 | INFO     | Epoch 059 |  56.5s | train_loss(MSE)=0.005921 | val MSE=0.000001 MAE=0.000430 RMSE=0.000869 R2=0.9956
+2026-10-04 19:49:54 | INFO     | Epoch 060 |  57.6s | train_loss(MSE)=0.005913 | val MSE=0.000001 MAE=0.000477 RMSE=0.001091 R2=0.9931
+2026-10-04 19:50:50 | INFO     | Epoch 061 |  56.6s | train_loss(MSE)=0.005952 | val MSE=0.000001 MAE=0.000513 RMSE=0.000991 R2=0.9943
+2026-10-04 19:51:47 | INFO     | Epoch 062 |  57.0s | train_loss(MSE)=0.005910 | val MSE=0.000001 MAE=0.000481 RMSE=0.000880 R2=0.9955
+2026-10-04 19:52:44 | INFO     | Epoch 063 |  56.5s | train_loss(MSE)=0.005833 | val MSE=0.000001 MAE=0.000444 RMSE=0.000886 R2=0.9954
+2026-10-04 19:53:40 | INFO     | Epoch 064 |  56.6s | train_loss(MSE)=0.005864 | val MSE=0.000001 MAE=0.000405 RMSE=0.000787 R2=0.9964
+2026-10-04 19:53:40 | INFO     | Saved new best model (mae=0.000405)
+2026-10-04 19:54:35 | INFO     | Epoch 065 |  54.4s | train_loss(MSE)=0.005632 | val MSE=0.000001 MAE=0.000430 RMSE=0.000980 R2=0.9944
+2026-10-04 19:55:28 | INFO     | Epoch 066 |  53.6s | train_loss(MSE)=0.005557 | val MSE=0.000001 MAE=0.000519 RMSE=0.001136 R2=0.9925
+2026-10-04 19:56:24 | INFO     | Epoch 067 |  55.3s | train_loss(MSE)=0.005750 | val MSE=0.000001 MAE=0.000502 RMSE=0.001100 R2=0.9930
+2026-10-04 19:57:20 | INFO     | Epoch 068 |  56.4s | train_loss(MSE)=0.005190 | val MSE=0.000001 MAE=0.000470 RMSE=0.000999 R2=0.9942
+2026-10-04 19:58:17 | INFO     | Epoch 069 |  56.6s | train_loss(MSE)=0.005748 | val MSE=0.000001 MAE=0.000409 RMSE=0.000840 R2=0.9959
+2026-10-04 19:59:12 | INFO     | Epoch 070 |  55.7s | train_loss(MSE)=0.005514 | val MSE=0.000001 MAE=0.000377 RMSE=0.000710 R2=0.9971
+2026-10-04 19:59:12 | INFO     | Saved new best model (mae=0.000377)
+2026-10-04 20:00:09 | INFO     | Epoch 071 |  57.0s | train_loss(MSE)=0.005575 | val MSE=0.000001 MAE=0.000477 RMSE=0.001013 R2=0.9940
+2026-10-04 20:01:06 | INFO     | Epoch 072 |  56.6s | train_loss(MSE)=0.005449 | val MSE=0.000001 MAE=0.000457 RMSE=0.001012 R2=0.9941
+2026-10-04 20:02:00 | INFO     | Epoch 073 |  53.6s | train_loss(MSE)=0.005666 | val MSE=0.000001 MAE=0.000429 RMSE=0.000970 R2=0.9945
+2026-10-04 20:02:57 | INFO     | Epoch 074 |  57.6s | train_loss(MSE)=0.004930 | val MSE=0.000001 MAE=0.000485 RMSE=0.001008 R2=0.9941
+2026-10-04 20:03:53 | INFO     | Epoch 075 |  56.2s | train_loss(MSE)=0.005302 | val MSE=0.000001 MAE=0.000433 RMSE=0.000886 R2=0.9954
+2026-10-04 20:04:49 | INFO     | Epoch 076 |  56.0s | train_loss(MSE)=0.005183 | val MSE=0.000001 MAE=0.000400 RMSE=0.000864 R2=0.9957
+2026-10-04 20:05:47 | INFO     | Epoch 077 |  57.2s | train_loss(MSE)=0.005164 | val MSE=0.000001 MAE=0.000528 RMSE=0.000994 R2=0.9943
+2026-10-04 20:06:42 | INFO     | Epoch 078 |  55.5s | train_loss(MSE)=0.004880 | val MSE=0.000001 MAE=0.000416 RMSE=0.000951 R2=0.9948
+2026-10-04 20:07:40 | INFO     | Epoch 079 |  58.0s | train_loss(MSE)=0.005071 | val MSE=0.000001 MAE=0.000374 RMSE=0.000725 R2=0.9969
+2026-10-04 20:08:38 | INFO     | Epoch 080 |  57.9s | train_loss(MSE)=0.004932 | val MSE=0.000001 MAE=0.000522 RMSE=0.000934 R2=0.9949
+2026-10-04 20:09:32 | INFO     | Epoch 081 |  54.3s | train_loss(MSE)=0.004989 | val MSE=0.000001 MAE=0.000419 RMSE=0.000863 R2=0.9957
+2026-10-04 20:10:30 | INFO     | Epoch 082 |  57.4s | train_loss(MSE)=0.004844 | val MSE=0.000001 MAE=0.000453 RMSE=0.000979 R2=0.9944
+2026-10-04 20:11:28 | INFO     | Epoch 083 |  57.9s | train_loss(MSE)=0.004882 | val MSE=0.000001 MAE=0.000378 RMSE=0.000771 R2=0.9965
+2026-10-04 20:12:19 | INFO     | Epoch 084 |  51.8s | train_loss(MSE)=0.004947 | val MSE=0.000001 MAE=0.000564 RMSE=0.001074 R2=0.9933
+2026-10-04 20:13:13 | INFO     | Epoch 085 |  53.7s | train_loss(MSE)=0.005009 | val MSE=0.000001 MAE=0.000434 RMSE=0.000950 R2=0.9948
+2026-10-04 20:14:09 | INFO     | Epoch 086 |  55.9s | train_loss(MSE)=0.004862 | val MSE=0.000001 MAE=0.000381 RMSE=0.000832 R2=0.9960
+2026-10-04 20:15:06 | INFO     | Epoch 087 |  57.0s | train_loss(MSE)=0.004673 | val MSE=0.000001 MAE=0.000409 RMSE=0.000887 R2=0.9954
+2026-10-04 20:15:59 | INFO     | Epoch 088 |  52.7s | train_loss(MSE)=0.004948 | val MSE=0.000001 MAE=0.000389 RMSE=0.000842 R2=0.9959
+2026-10-04 20:16:50 | INFO     | Epoch 089 |  51.7s | train_loss(MSE)=0.004722 | val MSE=0.000001 MAE=0.000466 RMSE=0.000877 R2=0.9955
+2026-10-04 20:17:44 | INFO     | Epoch 090 |  53.7s | train_loss(MSE)=0.004733 | val MSE=0.000001 MAE=0.000432 RMSE=0.001011 R2=0.9941
+2026-10-04 20:18:41 | INFO     | Epoch 091 |  56.5s | train_loss(MSE)=0.004775 | val MSE=0.000001 MAE=0.000417 RMSE=0.000810 R2=0.9962
+2026-10-04 20:19:36 | INFO     | Epoch 092 |  55.0s | train_loss(MSE)=0.004539 | val MSE=0.000001 MAE=0.000387 RMSE=0.000884 R2=0.9955
+2026-10-04 20:20:30 | INFO     | Epoch 093 |  54.1s | train_loss(MSE)=0.004720 | val MSE=0.000001 MAE=0.000372 RMSE=0.000866 R2=0.9956
+2026-10-04 20:21:26 | INFO     | Epoch 094 |  56.7s | train_loss(MSE)=0.004466 | val MSE=0.000001 MAE=0.000403 RMSE=0.000905 R2=0.9952
+2026-10-04 20:22:26 | INFO     | Epoch 095 |  59.2s | train_loss(MSE)=0.004854 | val MSE=0.000001 MAE=0.000375 RMSE=0.000832 R2=0.9960
+2026-10-04 20:23:22 | INFO     | Epoch 096 |  56.8s | train_loss(MSE)=0.004600 | val MSE=0.000001 MAE=0.000457 RMSE=0.001066 R2=0.9934
+2026-10-04 20:24:16 | INFO     | Epoch 097 |  53.2s | train_loss(MSE)=0.004619 | val MSE=0.000001 MAE=0.000440 RMSE=0.000999 R2=0.9942
+2026-10-04 20:25:09 | INFO     | Epoch 098 |  53.2s | train_loss(MSE)=0.004411 | val MSE=0.000001 MAE=0.000443 RMSE=0.000813 R2=0.9962
+2026-10-04 20:26:02 | INFO     | Epoch 099 |  53.7s | train_loss(MSE)=0.004528 | val MSE=0.000001 MAE=0.000402 RMSE=0.000791 R2=0.9964
+2026-10-04 20:27:00 | INFO     | Epoch 100 |  57.9s | train_loss(MSE)=0.004304 | val MSE=0.000002 MAE=0.000525 RMSE=0.001381 R2=0.9889
+2026-10-04 20:27:57 | INFO     | Epoch 101 |  57.2s | train_loss(MSE)=0.004460 | val MSE=0.000001 MAE=0.000396 RMSE=0.000864 R2=0.9957
+2026-10-04 20:28:55 | INFO     | Epoch 102 |  57.6s | train_loss(MSE)=0.004271 | val MSE=0.000001 MAE=0.000367 RMSE=0.000764 R2=0.9966
+2026-10-04 20:28:55 | INFO     | Saved new best model (mae=0.000367)
+2026-10-04 20:29:52 | INFO     | Epoch 103 |  57.1s | train_loss(MSE)=0.004364 | val MSE=0.000001 MAE=0.000420 RMSE=0.000846 R2=0.9958
+2026-10-04 20:30:50 | INFO     | Epoch 104 |  57.7s | train_loss(MSE)=0.004533 | val MSE=0.000001 MAE=0.000425 RMSE=0.000944 R2=0.9948
+2026-10-04 20:31:46 | INFO     | Epoch 105 |  55.7s | train_loss(MSE)=0.004304 | val MSE=0.000001 MAE=0.000397 RMSE=0.000866 R2=0.9956
+2026-10-04 20:32:41 | INFO     | Epoch 106 |  55.8s | train_loss(MSE)=0.004380 | val MSE=0.000001 MAE=0.000497 RMSE=0.001071 R2=0.9933
+2026-10-04 20:33:39 | INFO     | Epoch 107 |  57.5s | train_loss(MSE)=0.004385 | val MSE=0.000000 MAE=0.000316 RMSE=0.000636 R2=0.9977
+2026-10-04 20:33:39 | INFO     | Saved new best model (mae=0.000316)
+2026-10-04 20:34:34 | INFO     | Epoch 108 |  54.8s | train_loss(MSE)=0.004683 | val MSE=0.000001 MAE=0.000376 RMSE=0.000902 R2=0.9953
+2026-10-04 20:35:30 | INFO     | Epoch 109 |  56.0s | train_loss(MSE)=0.004146 | val MSE=0.000001 MAE=0.000493 RMSE=0.001068 R2=0.9934
+2026-10-04 20:36:29 | INFO     | Epoch 110 |  59.0s | train_loss(MSE)=0.005067 | val MSE=0.000001 MAE=0.000383 RMSE=0.000868 R2=0.9956
+2026-10-04 20:37:27 | INFO     | Epoch 111 |  57.8s | train_loss(MSE)=0.004073 | val MSE=0.000001 MAE=0.000380 RMSE=0.000813 R2=0.9962
+2026-10-04 20:38:22 | INFO     | Epoch 112 |  55.4s | train_loss(MSE)=0.003989 | val MSE=0.000001 MAE=0.000394 RMSE=0.000891 R2=0.9954
+2026-10-04 20:39:17 | INFO     | Epoch 113 |  55.1s | train_loss(MSE)=0.004383 | val MSE=0.000001 MAE=0.000480 RMSE=0.001078 R2=0.9933
+2026-10-04 20:40:14 | INFO     | Epoch 114 |  56.8s | train_loss(MSE)=0.004037 | val MSE=0.000001 MAE=0.000419 RMSE=0.000866 R2=0.9957
+2026-10-04 20:41:08 | INFO     | Epoch 115 |  53.7s | train_loss(MSE)=0.004002 | val MSE=0.000001 MAE=0.000399 RMSE=0.000880 R2=0.9955
+2026-10-04 20:42:04 | INFO     | Epoch 116 |  56.1s | train_loss(MSE)=0.004059 | val MSE=0.000001 MAE=0.000431 RMSE=0.000974 R2=0.9945
+2026-10-04 20:42:59 | INFO     | Epoch 117 |  55.7s | train_loss(MSE)=0.004258 | val MSE=0.000001 MAE=0.000389 RMSE=0.000894 R2=0.9954
+2026-10-04 20:43:55 | INFO     | Epoch 118 |  55.3s | train_loss(MSE)=0.004228 | val MSE=0.000001 MAE=0.000384 RMSE=0.000832 R2=0.9960
+2026-10-04 20:44:49 | INFO     | Epoch 119 |  54.4s | train_loss(MSE)=0.003913 | val MSE=0.000001 MAE=0.000370 RMSE=0.000794 R2=0.9963
+2026-10-04 20:45:46 | INFO     | Epoch 120 |  56.5s | train_loss(MSE)=0.004011 | val MSE=0.000001 MAE=0.000429 RMSE=0.001055 R2=0.9935
+2026-10-04 20:46:43 | INFO     | Epoch 121 |  57.0s | train_loss(MSE)=0.004065 | val MSE=0.000000 MAE=0.000340 RMSE=0.000697 R2=0.9972
+2026-10-04 20:47:41 | INFO     | Epoch 122 |  58.2s | train_loss(MSE)=0.004225 | val MSE=0.000001 MAE=0.000374 RMSE=0.000829 R2=0.9960
+2026-10-04 20:48:36 | INFO     | Epoch 123 |  55.1s | train_loss(MSE)=0.004248 | val MSE=0.000001 MAE=0.000419 RMSE=0.000965 R2=0.9946
+2026-10-04 20:49:32 | INFO     | Epoch 124 |  56.3s | train_loss(MSE)=0.003681 | val MSE=0.000001 MAE=0.000416 RMSE=0.000905 R2=0.9953
+2026-10-04 20:50:27 | INFO     | Epoch 125 |  54.5s | train_loss(MSE)=0.004052 | val MSE=0.000001 MAE=0.000354 RMSE=0.000853 R2=0.9958
+2026-10-04 20:51:20 | INFO     | Epoch 126 |  52.9s | train_loss(MSE)=0.004216 | val MSE=0.000001 MAE=0.000398 RMSE=0.000877 R2=0.9955
+2026-10-04 20:52:14 | INFO     | Epoch 127 |  54.5s | train_loss(MSE)=0.004027 | val MSE=0.000000 MAE=0.000307 RMSE=0.000606 R2=0.9979
+2026-10-04 20:53:09 | INFO     | Epoch 128 |  54.8s | train_loss(MSE)=0.003769 | val MSE=0.000001 MAE=0.000397 RMSE=0.000999 R2=0.9942
+2026-10-04 20:54:07 | INFO     | Epoch 129 |  58.3s | train_loss(MSE)=0.004010 | val MSE=0.000001 MAE=0.000419 RMSE=0.001041 R2=0.9937
+2026-10-04 20:55:03 | INFO     | Epoch 130 |  56.1s | train_loss(MSE)=0.003774 | val MSE=0.000001 MAE=0.000326 RMSE=0.000710 R2=0.9971
+2026-10-04 20:56:00 | INFO     | Epoch 131 |  56.6s | train_loss(MSE)=0.004015 | val MSE=0.000001 MAE=0.000380 RMSE=0.000938 R2=0.9949
+2026-10-04 20:56:56 | INFO     | Epoch 132 |  56.0s | train_loss(MSE)=0.003953 | val MSE=0.000001 MAE=0.000412 RMSE=0.000921 R2=0.9951
+2026-10-04 20:57:53 | INFO     | Epoch 133 |  57.4s | train_loss(MSE)=0.003743 | val MSE=0.000001 MAE=0.000383 RMSE=0.000900 R2=0.9953
+2026-10-04 20:58:47 | INFO     | Epoch 134 |  54.0s | train_loss(MSE)=0.003996 | val MSE=0.000001 MAE=0.000414 RMSE=0.000870 R2=0.9956
+2026-10-04 20:59:41 | INFO     | Epoch 135 |  53.6s | train_loss(MSE)=0.003694 | val MSE=0.000001 MAE=0.000363 RMSE=0.000755 R2=0.9967
+2026-10-04 21:00:38 | INFO     | Epoch 136 |  57.2s | train_loss(MSE)=0.003826 | val MSE=0.000001 MAE=0.000327 RMSE=0.000717 R2=0.9970
+2026-10-04 21:01:35 | INFO     | Epoch 137 |  57.0s | train_loss(MSE)=0.003790 | val MSE=0.000001 MAE=0.000375 RMSE=0.000946 R2=0.9948
+2026-10-04 21:02:31 | INFO     | Epoch 138 |  56.1s | train_loss(MSE)=0.003838 | val MSE=0.000001 MAE=0.000355 RMSE=0.000836 R2=0.9959
+2026-10-04 21:03:30 | INFO     | Epoch 139 |  58.3s | train_loss(MSE)=0.003877 | val MSE=0.000001 MAE=0.000412 RMSE=0.000856 R2=0.9957
+2026-10-04 21:04:30 | INFO     | Epoch 140 |  60.5s | train_loss(MSE)=0.003856 | val MSE=0.000001 MAE=0.000416 RMSE=0.001012 R2=0.9941
+2026-10-04 21:05:30 | INFO     | Epoch 141 |  59.9s | train_loss(MSE)=0.003784 | val MSE=0.000001 MAE=0.000384 RMSE=0.000913 R2=0.9952
+2026-10-04 21:06:28 | INFO     | Epoch 142 |  58.5s | train_loss(MSE)=0.003628 | val MSE=0.000001 MAE=0.000413 RMSE=0.000872 R2=0.9956
+2026-10-04 21:07:26 | INFO     | Epoch 143 |  57.5s | train_loss(MSE)=0.003727 | val MSE=0.000001 MAE=0.000462 RMSE=0.000982 R2=0.9944
+2026-10-04 21:08:24 | INFO     | Epoch 144 |  58.6s | train_loss(MSE)=0.003887 | val MSE=0.000001 MAE=0.000362 RMSE=0.000879 R2=0.9955
+2026-10-04 21:09:21 | INFO     | Epoch 145 |  56.9s | train_loss(MSE)=0.003604 | val MSE=0.000001 MAE=0.000363 RMSE=0.000895 R2=0.9954
+2026-10-04 21:10:20 | INFO     | Epoch 146 |  58.5s | train_loss(MSE)=0.003850 | val MSE=0.000001 MAE=0.000555 RMSE=0.001112 R2=0.9928
+2026-10-04 21:11:17 | INFO     | Epoch 147 |  57.3s | train_loss(MSE)=0.003800 | val MSE=0.000001 MAE=0.000394 RMSE=0.000888 R2=0.9954
+2026-10-04 21:11:17 | INFO     | Early stopping at epoch 147 (no improvement for 40 epochs)
+2026-10-04 21:11:17 | INFO     | 
+============================================================
+2026-10-04 21:11:17 | INFO     | FINAL EVALUATION ON TEST SET
+2026-10-04 21:11:17 | INFO     | ============================================================
+2026-10-04 21:11:21 | INFO     | TEST RESULTS:
+2026-10-04 21:11:21 | INFO     | Test MSE=0.000000 MAE=0.000310 RMSE=0.000608 R2=0.9978
+2026-10-04 21:11:21 | INFO     | ============================================================
+2026-10-04 21:11:21 | INFO     | TRAINING FINISHED. Best val mae: 0.000316
+2026-10-04 21:11:21 | INFO     | Checkpoint: test_painn_des300k_275_geom/best_model.pt
+2026-10-04 21:11:21 | INFO     | ============================================================

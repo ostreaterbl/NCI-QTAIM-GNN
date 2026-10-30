@@ -1,0 +1,64 @@
+2026-10-26 15:49:42 | INFO     | ======================================================================
+2026-10-26 15:49:42 | INFO     | STARTING BOND-ADDITIVE ENERGY EVALUATION
+2026-10-26 15:49:42 | INFO     | ======================================================================
+2026-10-26 15:49:42 | INFO     | Loading checkpoint: des300k_275_desc_painn_dist/best_model.pt
+2026-10-26 15:49:42 | INFO     | Model loaded. bond_mode=desc_painn | gate=none | nam=False | dist=True | descriptors=['rho', 'lapl', 'g', 'v', 'h']
+2026-10-26 15:49:42 | INFO     | Energy stats from checkpoint: mean=0.000000, std=0.013205
+2026-10-26 15:49:42 | INFO     | Loading test set: data/3calc_275.pkl
+2026-10-26 15:49:42 | INFO     | Molecules in test set: 3
+2026-10-26 15:49:42 | INFO     | DataLoader ready. Batches: 1
+2026-10-26 15:49:42 | INFO     | Running inference...
+2026-10-26 15:49:42 | INFO     | 
+======================================================================
+2026-10-26 15:49:42 | INFO     | GLOBAL ENERGY METRICS
+2026-10-26 15:49:42 | INFO     | ======================================================================
+2026-10-26 15:49:42 | INFO     | Total molecules evaluated: 3
+2026-10-26 15:49:42 | INFO     | Total bond paths:          169
+2026-10-26 15:49:42 | INFO     | MSE:  nan
+2026-10-26 15:49:42 | INFO     | MAE:  nan
+2026-10-26 15:49:42 | INFO     | RMSE: nan
+2026-10-26 15:49:42 | INFO     | R2:   nan
+2026-10-26 15:49:43 | INFO     | Scatter plot saved to: logs/evaluation_bond_scatter.png
+2026-10-26 15:49:43 | INFO     | 
+ERROR BY NUMBER OF BOND PATHS IN DIMER
+2026-10-26 15:49:43 | INFO     | --------------------------------------------------
+2026-10-26 15:49:43 | INFO     | N_BP   |      N |        MAE |  Mean signed
+2026-10-26 15:49:43 | INFO     | --------------------------------------------------
+2026-10-26 15:49:43 | INFO     | >=10   |      3 |        nan |         +nan
+2026-10-26 15:49:43 | INFO     | 
+BOND CONTRIBUTIONS BY PAIR TYPE (sorted by total share)
+2026-10-26 15:49:43 | INFO     | ------------------------------------------------------------------------------------------
+2026-10-26 15:49:43 | INFO     | Pair Type    |      N |   mean e_b |    min e_b |    max e_b | share % | median e/V
+2026-10-26 15:49:43 | INFO     | ------------------------------------------------------------------------------------------
+2026-10-26 15:49:43 | INFO     | H...O        |     42 |        nan |        nan |        nan |     nan |        nan
+2026-10-26 15:49:43 | INFO     | C...O        |      7 |        nan |        nan |        nan |     nan |        nan
+2026-10-26 15:49:43 | INFO     | C...H        |     34 |        nan |        nan |        nan |     nan |        nan
+2026-10-26 15:49:43 | INFO     | C...C        |      2 |        nan |        nan |        nan |     nan |        nan
+2026-10-26 15:49:43 | INFO     | Cl...O       |      1 |        nan |        nan |        nan |     nan |        nan
+2026-10-26 15:49:43 | INFO     | Cl...H       |     11 |        nan |        nan |        nan |     nan |        nan
+2026-10-26 15:49:43 | INFO     | C...Cl       |      1 |        nan |        nan |        nan |     nan |        nan
+2026-10-26 15:49:43 | INFO     | H...H        |     44 |        nan |        nan |        nan |     nan |        nan
+2026-10-26 15:49:43 | INFO     | H...N        |     10 |        nan |        nan |        nan |     nan |        nan
+2026-10-26 15:49:43 | INFO     | C...N        |      3 |        nan |        nan |        nan |     nan |        nan
+2026-10-26 15:49:43 | INFO     | O...O        |      1 |        nan |        nan |        nan |     nan |        nan
+2026-10-26 15:49:43 | INFO     | Cl...S       |      1 |        nan |        nan |        nan |     nan |        nan
+2026-10-26 15:49:43 | INFO     | C...F        |      1 |        nan |        nan |        nan |     nan |        nan
+2026-10-26 15:49:43 | INFO     | F...H        |      6 |        nan |        nan |        nan |     nan |        nan
+2026-10-26 15:49:43 | INFO     | F...S        |      1 |        nan |        nan |        nan |     nan |        nan
+2026-10-26 15:49:43 | INFO     | H...S        |      2 |        nan |        nan |        nan |     nan |        nan
+2026-10-26 15:49:43 | INFO     | N...N        |      1 |        nan |        nan |        nan |     nan |        nan
+2026-10-26 15:49:43 | INFO     | C...S        |      1 |        nan |        nan |        nan |     nan |        nan
+2026-10-26 15:49:43 | INFO     | e_b vs V plot saved to: logs/evaluation_bond_ebond_vs_V.png
+2026-10-26 15:49:44 | INFO     | e_b/V boxplot saved to: logs/evaluation_bond_e_over_V_box.png
+2026-10-26 15:49:44 | INFO     | Per-dimer errors saved to: logs/evaluation_bond_errors.csv
+2026-10-26 15:49:44 | INFO     | Per-bond-path contributions saved to: logs/evaluation_bond_bonds.csv
+2026-10-26 15:49:44 | INFO     | 
+TOP 10 MOLECULES WITH LARGEST ABSOLUTE ERROR:
+2026-10-26 15:49:44 | INFO     |    1. 2OBF.xyz                       | n_BP= 52 | true= -0.3174 | pred=     nan | err=    +nan
+2026-10-26 15:49:44 | INFO     |    2. 2p4y.xyz                       | n_BP= 71 | true= -0.2504 | pred=     nan | err=    +nan
+2026-10-26 15:49:44 | INFO     |    3. 3PE2.xyz                       | n_BP= 46 | true= -0.2032 | pred=     nan | err=    +nan
+2026-10-26 15:49:44 | INFO     | 
+======================================================================
+2026-10-26 15:49:44 | INFO     | BOND-ADDITIVE ENERGY EVALUATION COMPLETE
+2026-10-26 15:49:44 | INFO     | Check: logs/evaluation_bond.log, logs/evaluation_bond_scatter.png, logs/evaluation_bond_errors.csv, logs/evaluation_bond_bonds.csv
+2026-10-26 15:49:44 | INFO     | ======================================================================

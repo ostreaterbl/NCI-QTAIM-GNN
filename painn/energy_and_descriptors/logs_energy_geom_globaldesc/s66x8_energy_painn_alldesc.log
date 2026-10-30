@@ -1,0 +1,40 @@
+2026-10-12 10:26:40 | INFO     | ======================================================================
+2026-10-12 10:26:40 | INFO     | STARTING ENERGY REGRESSION EVALUATION
+2026-10-12 10:26:40 | INFO     | ======================================================================
+2026-10-12 10:26:40 | INFO     | Loading checkpoint: test_painn_des300k_275_alldesc/best_model.pt
+2026-10-12 10:26:40 | INFO     | Model loaded. graph_mode=custom | h=64 | cutoff=12.0
+2026-10-12 10:26:40 | INFO     | Energy stats from checkpoint: mean=0.001299, std=0.013141
+2026-10-12 10:26:40 | INFO     | Loading test set: data/E_S66x8_275.pkl
+2026-10-12 10:26:41 | INFO     | Molecules in test set: 520
+2026-10-12 10:26:41 | INFO     | Global features computed for test set: dim=5
+2026-10-12 10:26:41 | INFO     | DataLoader ready. Batches: 9
+2026-10-12 10:26:41 | INFO     | Running inference...
+2026-10-12 10:26:41 | INFO     | 
+======================================================================
+2026-10-12 10:26:41 | INFO     | GLOBAL ENERGY METRICS
+2026-10-12 10:26:41 | INFO     | ======================================================================
+2026-10-12 10:26:41 | INFO     | Total molecules evaluated: 520
+2026-10-12 10:26:41 | INFO     | MSE:  0.000001
+2026-10-12 10:26:41 | INFO     | MAE:  0.000667
+2026-10-12 10:26:41 | INFO     | RMSE: 0.001119
+2026-10-12 10:26:41 | INFO     | R?:   0.9670
+2026-10-12 10:26:41 | INFO     | Generating prediction vs true value scatter plot...
+2026-10-12 10:26:42 | INFO     | Scatter plot saved to: logs/evaluation_energy_scatter.png
+2026-10-12 10:26:42 | INFO     | Detailed error log saved to: logs/evaluation_energy_errors.csv
+2026-10-12 10:26:42 | INFO     | 
+TOP 10 MOLECULES WITH LARGEST ABSOLUTE ERROR:
+2026-10-12 10:26:42 | INFO     |    1. 22_AcOH-Uracil_090.xyz         | true= -0.0285 | pred= -0.0219 | err= +0.0066
+2026-10-12 10:26:42 | INFO     |    2. 23_AcNH2-Uracil_090.xyz        | true= -0.0282 | pred= -0.0216 | err= +0.0066
+2026-10-12 10:26:42 | INFO     |    3. 22_AcOH-Uracil_095.xyz         | true= -0.0306 | pred= -0.0249 | err= +0.0057
+2026-10-12 10:26:42 | INFO     |    4. 23_AcNH2-Uracil_095.xyz        | true= -0.0301 | pred= -0.0247 | err= +0.0054
+2026-10-12 10:26:42 | INFO     |    5. 20_AcOH-AcOH_090.xyz           | true= -0.0278 | pred= -0.0226 | err= +0.0052
+2026-10-12 10:26:42 | INFO     |    6. 17_Uracil-Uracil_BP_090.xyz    | true= -0.0250 | pred= -0.0200 | err= +0.0050
+2026-10-12 10:26:42 | INFO     |    7. 22_AcOH-Uracil_100.xyz         | true= -0.0311 | pred= -0.0263 | err= +0.0048
+2026-10-12 10:26:42 | INFO     |    8. 23_AcNH2-Uracil_100.xyz        | true= -0.0306 | pred= -0.0261 | err= +0.0045
+2026-10-12 10:26:42 | INFO     |    9. 20_AcOH-AcOH_095.xyz           | true= -0.0299 | pred= -0.0256 | err= +0.0043
+2026-10-12 10:26:42 | INFO     |   10. 22_AcOH-Uracil_105.xyz         | true= -0.0305 | pred= -0.0267 | err= +0.0039
+2026-10-12 10:26:42 | INFO     | 
+======================================================================
+2026-10-12 10:26:42 | INFO     | ENERGY EVALUATION COMPLETE
+2026-10-12 10:26:42 | INFO     | Check: logs/evaluation_energy.log, logs/evaluation_energy_scatter.png, logs/evaluation_energy_errors.csv
+2026-10-12 10:26:42 | INFO     | ======================================================================

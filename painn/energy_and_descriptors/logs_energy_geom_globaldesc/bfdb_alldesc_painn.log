@@ -1,0 +1,40 @@
+2026-10-21 18:23:39 | INFO     | ======================================================================
+2026-10-21 18:23:39 | INFO     | STARTING ENERGY REGRESSION EVALUATION
+2026-10-21 18:23:39 | INFO     | ======================================================================
+2026-10-21 18:23:39 | INFO     | Loading checkpoint: test_painn_des300k_275_alldesc/best_model.pt
+2026-10-21 18:23:40 | INFO     | Model loaded. graph_mode=custom | h=64 | cutoff=12.0
+2026-10-21 18:23:40 | INFO     | Energy stats from checkpoint: mean=0.001299, std=0.013141
+2026-10-21 18:23:40 | INFO     | Loading test set: data/bfdb_275.pkl
+2026-10-21 18:23:40 | INFO     | Molecules in test set: 416
+2026-10-21 18:23:40 | INFO     | Global features computed for test set: dim=5
+2026-10-21 18:23:40 | INFO     | DataLoader ready. Batches: 7
+2026-10-21 18:23:40 | INFO     | Running inference...
+2026-10-21 18:23:41 | INFO     | 
+======================================================================
+2026-10-21 18:23:41 | INFO     | GLOBAL ENERGY METRICS
+2026-10-21 18:23:41 | INFO     | ======================================================================
+2026-10-21 18:23:41 | INFO     | Total molecules evaluated: 416
+2026-10-21 18:23:41 | INFO     | MSE:  0.000201
+2026-10-21 18:23:41 | INFO     | MAE:  0.003052
+2026-10-21 18:23:41 | INFO     | RMSE: 0.014186
+2026-10-21 18:23:41 | INFO     | R?:   0.8875
+2026-10-21 18:23:41 | INFO     | Generating prediction vs true value scatter plot...
+2026-10-21 18:23:41 | INFO     | Scatter plot saved to: logs/evaluation_energy_scatter.png
+2026-10-21 18:23:41 | INFO     | Detailed error log saved to: logs/evaluation_energy_errors.csv
+2026-10-21 18:23:41 | INFO     | 
+TOP 10 MOLECULES WITH LARGEST ABSOLUTE ERROR:
+2026-10-21 18:23:41 | INFO     |    1. SSI__078ASP-157LYS-1.xyz       | true= -0.1664 | pred= -0.0076 | err= +0.1588
+2026-10-21 18:23:41 | INFO     |    2. SSI__190LYS-193GLU-1.xyz       | true= -0.1735 | pred= -0.0505 | err= +0.1230
+2026-10-21 18:23:41 | INFO     |    3. SSI__089ARG-106ASP-1.xyz       | true= -0.1476 | pred= -0.0671 | err= +0.0805
+2026-10-21 18:23:41 | INFO     |    4. SSI__021ARG-035GLU-2.xyz       | true= -0.1465 | pred= -0.0717 | err= +0.0748
+2026-10-21 18:23:41 | INFO     |    5. SSI__134GLU-138ARG-1.xyz       | true= -0.1668 | pred= -0.0938 | err= +0.0730
+2026-10-21 18:23:41 | INFO     |    6. SSI__041GLU-045LYS-1.xyz       | true= -0.1721 | pred= -0.1042 | err= +0.0678
+2026-10-21 18:23:41 | INFO     |    7. SSI__077ASP-080ARG-2.xyz       | true= -0.1362 | pred= -0.0732 | err= +0.0630
+2026-10-21 18:23:41 | INFO     |    8. SSI__035ASP-046ARG-1.xyz       | true= -0.1577 | pred= -0.0985 | err= +0.0592
+2026-10-21 18:23:41 | INFO     |    9. SSI__080ASP-087LYS-1.xyz       | true= -0.1791 | pred= -0.1224 | err= +0.0567
+2026-10-21 18:23:41 | INFO     |   10. SSI__085LYS-088GLU-1.xyz       | true= -0.1778 | pred= -0.1230 | err= +0.0548
+2026-10-21 18:23:41 | INFO     | 
+======================================================================
+2026-10-21 18:23:41 | INFO     | ENERGY EVALUATION COMPLETE
+2026-10-21 18:23:41 | INFO     | Check: logs/evaluation_energy.log, logs/evaluation_energy_scatter.png, logs/evaluation_energy_errors.csv
+2026-10-21 18:23:41 | INFO     | ======================================================================

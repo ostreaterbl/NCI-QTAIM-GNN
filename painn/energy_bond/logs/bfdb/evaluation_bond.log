@@ -1,0 +1,67 @@
+2026-10-26 15:49:15 | INFO     | ======================================================================
+2026-10-26 15:49:15 | INFO     | STARTING BOND-ADDITIVE ENERGY EVALUATION
+2026-10-26 15:49:15 | INFO     | ======================================================================
+2026-10-26 15:49:15 | INFO     | Loading checkpoint: des300k_275_desc_painn_dist/best_model.pt
+2026-10-26 15:49:16 | INFO     | Model loaded. bond_mode=desc_painn | gate=none | nam=False | dist=True | descriptors=['rho', 'lapl', 'g', 'v', 'h']
+2026-10-26 15:49:16 | INFO     | Energy stats from checkpoint: mean=0.000000, std=0.013205
+2026-10-26 15:49:16 | INFO     | Loading test set: data/bfdb_275.pkl
+2026-10-26 15:49:16 | INFO     | Molecules in test set: 416
+2026-10-26 15:49:16 | INFO     | DataLoader ready. Batches: 7
+2026-10-26 15:49:16 | INFO     | Running inference...
+2026-10-26 15:49:16 | INFO     | 
+======================================================================
+2026-10-26 15:49:16 | INFO     | GLOBAL ENERGY METRICS
+2026-10-26 15:49:16 | INFO     | ======================================================================
+2026-10-26 15:49:16 | INFO     | Total molecules evaluated: 416
+2026-10-26 15:49:16 | INFO     | Total bond paths:          684
+2026-10-26 15:49:16 | INFO     | MSE:  0.000405
+2026-10-26 15:49:16 | INFO     | MAE:  0.004719
+2026-10-26 15:49:16 | INFO     | RMSE: 0.020124
+2026-10-26 15:49:16 | INFO     | R2:   0.7736
+2026-10-26 15:49:17 | INFO     | Scatter plot saved to: logs/evaluation_bond_scatter.png
+2026-10-26 15:49:17 | INFO     | 
+ERROR BY NUMBER OF BOND PATHS IN DIMER
+2026-10-26 15:49:17 | INFO     | --------------------------------------------------
+2026-10-26 15:49:17 | INFO     | N_BP   |      N |        MAE |  Mean signed
+2026-10-26 15:49:17 | INFO     | --------------------------------------------------
+2026-10-26 15:49:17 | INFO     | 1      |    203 |   0.006330 |    +0.006048
+2026-10-26 15:49:17 | INFO     | 2      |    166 |   0.003446 |    +0.002840
+2026-10-26 15:49:17 | INFO     | 3      |     39 |   0.002580 |    +0.001277
+2026-10-26 15:49:17 | INFO     | 4      |      8 |   0.000658 |    -0.000658
+2026-10-26 15:49:17 | INFO     | 
+BOND CONTRIBUTIONS BY PAIR TYPE (sorted by total share)
+2026-10-26 15:49:17 | INFO     | ------------------------------------------------------------------------------------------
+2026-10-26 15:49:17 | INFO     | Pair Type    |      N |   mean e_b |    min e_b |    max e_b | share % | median e/V
+2026-10-26 15:49:17 | INFO     | ------------------------------------------------------------------------------------------
+2026-10-26 15:49:17 | INFO     | H...O        |    113 |  -0.028680 |  -0.108415 |   0.003701 |    83.0 |     0.6309
+2026-10-26 15:49:17 | INFO     | C...H        |    191 |  -0.001885 |  -0.008445 |   0.000164 |     9.2 |     0.6471
+2026-10-26 15:49:17 | INFO     | H...H        |    322 |  -0.000594 |  -0.002147 |   0.010933 |     4.9 |     0.2387
+2026-10-26 15:49:17 | INFO     | H...N        |     24 |  -0.001750 |  -0.015433 |   0.003216 |     1.1 |     0.4366
+2026-10-26 15:49:17 | INFO     | N...O        |      6 |  -0.005554 |  -0.025592 |   0.003052 |     0.9 |     0.9633
+2026-10-26 15:49:17 | INFO     | C...C        |     10 |  -0.002435 |  -0.006138 |  -0.000775 |     0.6 |     0.8616
+2026-10-26 15:49:17 | INFO     | O...O        |      5 |   0.001567 |  -0.001242 |   0.004646 |    -0.2 |    -0.8058
+2026-10-26 15:49:17 | INFO     | C...N        |      4 |  -0.001612 |  -0.003171 |  -0.000620 |     0.2 |     0.6309
+2026-10-26 15:49:17 | INFO     | C...S        |      3 |  -0.001719 |  -0.002233 |  -0.001236 |     0.1 |     1.4024
+2026-10-26 15:49:17 | INFO     | H...S        |      3 |  -0.001593 |  -0.002183 |  -0.001039 |     0.1 |     0.5383
+2026-10-26 15:49:17 | INFO     | C...O        |      3 |  -0.000713 |  -0.000842 |  -0.000502 |     0.1 |     0.5869
+2026-10-26 15:49:18 | INFO     | e_b vs V plot saved to: logs/evaluation_bond_ebond_vs_V.png
+2026-10-26 15:49:18 | INFO     | e_b/V boxplot saved to: logs/evaluation_bond_e_over_V_box.png
+2026-10-26 15:49:18 | INFO     | Per-dimer errors saved to: logs/evaluation_bond_errors.csv
+2026-10-26 15:49:18 | INFO     | Per-bond-path contributions saved to: logs/evaluation_bond_bonds.csv
+2026-10-26 15:49:18 | INFO     | 
+TOP 10 MOLECULES WITH LARGEST ABSOLUTE ERROR:
+2026-10-26 15:49:18 | INFO     |    1. SSI__078ASP-157LYS-1.xyz       | n_BP=  2 | true= -0.1664 | pred= -0.0082 | err= +0.1581
+2026-10-26 15:49:18 | INFO     |    2. SSI__021ARG-035GLU-2.xyz       | n_BP=  1 | true= -0.1465 | pred= -0.0194 | err= +0.1271
+2026-10-26 15:49:18 | INFO     |    3. SSI__089ARG-106ASP-1.xyz       | n_BP=  1 | true= -0.1476 | pred= -0.0226 | err= +0.1250
+2026-10-26 15:49:18 | INFO     |    4. SSI__190LYS-193GLU-1.xyz       | n_BP=  1 | true= -0.1735 | pred= -0.0615 | err= +0.1120
+2026-10-26 15:49:18 | INFO     |    5. SSI__077ASP-080ARG-2.xyz       | n_BP=  1 | true= -0.1362 | pred= -0.0311 | err= +0.1052
+2026-10-26 15:49:18 | INFO     |    6. SSI__001ARG-015GLU-1.xyz       | n_BP=  1 | true= -0.1286 | pred= -0.0256 | err= +0.1030
+2026-10-26 15:49:18 | INFO     |    7. SSI__080ASP-087LYS-1.xyz       | n_BP=  1 | true= -0.1791 | pred= -0.0897 | err= +0.0894
+2026-10-26 15:49:18 | INFO     |    8. SSI__019LYS-071GLU-1.xyz       | n_BP=  1 | true= -0.1866 | pred= -0.1001 | err= +0.0865
+2026-10-26 15:49:18 | INFO     |    9. SSI__041GLU-045LYS-1.xyz       | n_BP=  2 | true= -0.1721 | pred= -0.0857 | err= +0.0863
+2026-10-26 15:49:18 | INFO     |   10. SSI__033ASP-279LYS-1.xyz       | n_BP=  1 | true= -0.1946 | pred= -0.1084 | err= +0.0862
+2026-10-26 15:49:18 | INFO     | 
+======================================================================
+2026-10-26 15:49:18 | INFO     | BOND-ADDITIVE ENERGY EVALUATION COMPLETE
+2026-10-26 15:49:18 | INFO     | Check: logs/evaluation_bond.log, logs/evaluation_bond_scatter.png, logs/evaluation_bond_errors.csv, logs/evaluation_bond_bonds.csv
+2026-10-26 15:49:18 | INFO     | ======================================================================

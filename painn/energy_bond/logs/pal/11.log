@@ -1,0 +1,58 @@
+2026-10-27 17:40:54 | INFO     | ======================================================================
+2026-10-27 17:40:54 | INFO     | STARTING BOND-ADDITIVE ENERGY EVALUATION
+2026-10-27 17:40:54 | INFO     | ======================================================================
+2026-10-27 17:40:54 | INFO     | Loading checkpoint: des300k_275_desc_painn_dist/best_model.pt
+2026-10-27 17:40:55 | INFO     | Model loaded. bond_mode=desc_painn | gate=none | nam=False | dist=True | descriptors=['rho', 'lapl', 'g', 'v', 'h']
+2026-10-27 17:40:55 | INFO     | Energy stats from checkpoint: mean=0.000000, std=0.013205
+2026-10-27 17:40:55 | INFO     | Loading test set: data/3calc_11.pkl
+2026-10-27 17:40:55 | INFO     | Molecules in test set: 3
+2026-10-27 17:40:55 | INFO     | DataLoader ready. Batches: 1
+2026-10-27 17:40:55 | INFO     | Running inference...
+2026-10-27 17:40:55 | INFO     | 
+======================================================================
+2026-10-27 17:40:55 | INFO     | GLOBAL ENERGY METRICS
+2026-10-27 17:40:55 | INFO     | ======================================================================
+2026-10-27 17:40:55 | INFO     | Total molecules evaluated: 3
+2026-10-27 17:40:55 | INFO     | Total bond paths:          112
+2026-10-27 17:40:55 | INFO     | MSE:  0.004152
+2026-10-27 17:40:55 | INFO     | MAE:  0.060816
+2026-10-27 17:40:55 | INFO     | RMSE: 0.064438
+2026-10-27 17:40:55 | INFO     | R2:   -0.8930
+2026-10-27 17:40:56 | INFO     | Scatter plot saved to: logs/evaluation_bond_scatter.png
+2026-10-27 17:40:56 | INFO     | 
+ERROR BY NUMBER OF BOND PATHS IN DIMER
+2026-10-27 17:40:56 | INFO     | --------------------------------------------------
+2026-10-27 17:40:56 | INFO     | N_BP   |      N |        MAE |  Mean signed
+2026-10-27 17:40:56 | INFO     | --------------------------------------------------
+2026-10-27 17:40:56 | INFO     | >=10   |      3 |   0.060816 |    +0.013533
+2026-10-27 17:40:56 | INFO     | 
+BOND CONTRIBUTIONS BY PAIR TYPE (sorted by total share)
+2026-10-27 17:40:56 | INFO     | ------------------------------------------------------------------------------------------
+2026-10-27 17:40:56 | INFO     | Pair Type    |      N |   mean e_b |    min e_b |    max e_b | share % | median e/V
+2026-10-27 17:40:56 | INFO     | ------------------------------------------------------------------------------------------
+2026-10-27 17:40:56 | INFO     | H...O        |     34 |  -0.017484 |  -0.108847 |  -0.000174 |    81.4 |     1.2218
+2026-10-27 17:40:56 | INFO     | H...N        |      5 |  -0.012047 |  -0.056337 |  -0.000233 |     8.2 |     0.3339
+2026-10-27 17:40:56 | INFO     | H...H        |     29 |  -0.000889 |  -0.007917 |   0.000014 |     3.5 |     0.2600
+2026-10-27 17:40:56 | INFO     | C...H        |     25 |  -0.000584 |  -0.001607 |   0.001398 |     2.0 |     0.2614
+2026-10-27 17:40:56 | INFO     | Cl...H       |      7 |  -0.001937 |  -0.003785 |  -0.000851 |     1.9 |     0.5297
+2026-10-27 17:40:56 | INFO     | C...O        |      5 |  -0.002554 |  -0.004147 |  -0.001244 |     1.7 |     1.0739
+2026-10-27 17:40:56 | INFO     | F...H        |      2 |  -0.001169 |  -0.001512 |  -0.000826 |     0.3 |     0.2091
+2026-10-27 17:40:56 | INFO     | C...Cl       |      1 |  -0.002010 |  -0.002010 |  -0.002010 |     0.3 |     0.8420
+2026-10-27 17:40:56 | INFO     | F...S        |      1 |  -0.001882 |  -0.001882 |  -0.001882 |     0.3 |     0.7099
+2026-10-27 17:40:56 | INFO     | C...F        |      1 |  -0.001623 |  -0.001623 |  -0.001623 |     0.2 |     0.9367
+2026-10-27 17:40:56 | INFO     | H...S        |      1 |  -0.001143 |  -0.001143 |  -0.001143 |     0.2 |     0.5905
+2026-10-27 17:40:56 | INFO     | C...C        |      1 |  -0.000075 |  -0.000075 |  -0.000075 |     0.0 |     0.0168
+2026-10-27 17:40:56 | INFO     | e_b vs V plot saved to: logs/evaluation_bond_ebond_vs_V.png
+2026-10-27 17:40:56 | INFO     | e_b/V boxplot saved to: logs/evaluation_bond_e_over_V_box.png
+2026-10-27 17:40:56 | INFO     | Per-dimer errors saved to: logs/evaluation_bond_errors.csv
+2026-10-27 17:40:56 | INFO     | Per-bond-path contributions saved to: logs/evaluation_bond_bonds.csv
+2026-10-27 17:40:56 | INFO     | 
+TOP 10 MOLECULES WITH LARGEST ABSOLUTE ERROR:
+2026-10-27 17:40:56 | INFO     |    1. 2OBF.xyz                       | n_BP= 39 | true= -0.3174 | pred= -0.2370 | err= +0.0803
+2026-10-27 17:40:56 | INFO     |    2. 3PE2.xyz                       | n_BP= 27 | true= -0.2032 | pred= -0.2742 | err= -0.0709
+2026-10-27 17:40:56 | INFO     |    3. 2p4y.xyz                       | n_BP= 46 | true= -0.2504 | pred= -0.2192 | err= +0.0312
+2026-10-27 17:40:56 | INFO     | 
+======================================================================
+2026-10-27 17:40:56 | INFO     | BOND-ADDITIVE ENERGY EVALUATION COMPLETE
+2026-10-27 17:40:56 | INFO     | Check: logs/evaluation_bond.log, logs/evaluation_bond_scatter.png, logs/evaluation_bond_errors.csv, logs/evaluation_bond_bonds.csv
+2026-10-27 17:40:56 | INFO     | ======================================================================
